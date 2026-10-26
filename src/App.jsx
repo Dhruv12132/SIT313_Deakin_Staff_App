@@ -5,8 +5,14 @@ import Navigation from "./Route/Navigation"
 import {Routes, Route} from "react-router-dom"
 import Login from "./Route/login"
 import Profile from "./Profile"
+import uploadStaff from "./uploadstaff";
+import { useEffect } from "react";
 
 function App() {
+
+ useEffect(() => {
+  uploadStaff();
+}, []);
   return(
 
  

@@ -1,24 +1,12 @@
-import { faker } from '@faker-js/faker';
-const Stafflist = [
-{
-    image: faker.image.personPortrait(),
-    name: faker.person.fullName(),
-    job: faker.person.jobTitle()
-},
+import { faker } from "@faker-js/faker";
 
-{
-    image: faker.image.personPortrait(),
-    name: faker.person.fullName(),
-    job: faker.person.jobTitle()
+faker.seed(123);
 
-},
+const stafflist = Array.from({ length: 3 }, (_, index) => ({
+  id: index + 1,
+  name: faker.person.fullName(),
+  job: faker.person.jobTitle(),
+  image: faker.image.avatar(),
+}));
 
-{
-    image: faker.image.personPortrait(),
-    name: faker.person.fullName(),
-    job: faker.person.jobTitle()
-
-},
-]
-
-export default Stafflist
+export default stafflist;
